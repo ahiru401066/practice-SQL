@@ -1,4 +1,4 @@
--- migrations/003_create_orders_table.sql
+-- migrations/002_create_orders_table.sql
 
 -- +goose Up
 CREATE TABLE orders (

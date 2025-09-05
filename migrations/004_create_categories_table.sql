@@ -1,4 +1,4 @@
--- migrations/005_create_categories_table.sql
+-- migrations/004_create_categories_table.sql
 
 -- +goose Up
 CREATE TABLE categories (

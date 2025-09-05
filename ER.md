@@ -7,13 +7,6 @@ erDiagram
     timestamp created_at
   }
 
-  profiles {
-    bigint user_id PK
-    string address 
-    string phone
-    date birthday
-  }
-
   orders {
     bigint id PK
     bigint user_id FK
@@ -21,8 +14,9 @@ erDiagram
     string status
   }
 
-  products {
+  items {
     bigint id PK
+    bigint order_id FK
     string name
     decimal price
     int stock
@@ -35,14 +29,13 @@ erDiagram
   }
 
   products_categories {
-    bigint product_id FK
+    bigint item_id FK
     bigint category_id FK
   }
 
   %% Relations
-  users ||--o{ profiles : has
   users ||--o{ orders : places
-  products ||--o{ orders : included_in
-  products ||--o{ products_categories : categorized_by
-  categories ||--o{ products_categories : includes
+  orders ||--o{ items : included_in
+  items ||--o{ items_categories : "itemは複数のcategoryを持つ"
+  categories ||--o{ items_categories : "categoryは複数のitemが所属する"
 ```
