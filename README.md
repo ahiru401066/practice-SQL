@@ -18,3 +18,13 @@ GUIでテーブル操作ができる！
 ```
 http://localhost:8080/
 ```
+
+## マイグレーションの実行
+Gooseを使用
+```
+# up
+goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" up
+
+# down
+goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" down
+```
