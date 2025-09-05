@@ -1,3 +1,4 @@
+```
 erDiagram
   users {
     bigint id PK
@@ -5,3 +6,4 @@ erDiagram
     timestamp created_at
     timestamp deleted_at
   }
+```
