@@ -1,4 +1,4 @@
-```
+```mermaid
 erDiagram
   users {
     bigint id PK
