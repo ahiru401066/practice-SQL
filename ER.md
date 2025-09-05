@@ -28,7 +28,7 @@ erDiagram
     string name
   }
 
-  products_categories {
+  items_categories {
     bigint item_id FK
     bigint category_id FK
   }
