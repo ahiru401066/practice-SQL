@@ -28,3 +28,8 @@ goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" up
 # down
 goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" down
 ```
+
+## seed（Gooseを使用）
+```
+mysql -u user -ppassword -h 127.0.0.1 -P 3306 mydb < seeds/users.sql
+```
