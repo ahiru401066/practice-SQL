@@ -26,9 +26,11 @@ Gooseを使用
 ```
 # up
 goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" up
+make migrate-up
 
 # down
 goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" down
+make migrate-down
 ```
 
 ## seed（Gooseを使用）
