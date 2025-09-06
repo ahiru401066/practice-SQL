@@ -1,6 +1,3 @@
--- migrations/003_create_items_table.sql
-
--- +goose Up
 CREATE TABLE items (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     order_id BIGINT NOT NULL,
@@ -10,6 +7,3 @@ CREATE TABLE items (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(id)
 );
-
--- +goose Down
-DROP TABLE IF EXISTS items;

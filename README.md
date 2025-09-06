@@ -20,7 +20,6 @@ http://localhost:8080/
 ```
 
 ## マイグレーションの実行
-Gooseを使用
 ```
 # up
 make migrate-up
@@ -29,7 +28,7 @@ make migrate-up
 make migrate-down
 ```
 
-## seed（Gooseを使用）
+## seed
 ```
 make seed-user
 ```
