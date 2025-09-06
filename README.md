@@ -5,12 +5,14 @@
 ```
 # コンテナ立ち上げ
 docker-compose up -d
+make up
 
 # コンテナの起動確認
 docker ps
 
 # コンテナ停止
 docker-compose down
+make down
 ```
 
 #### adminer
