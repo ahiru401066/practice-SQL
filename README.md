@@ -13,12 +13,6 @@ docker ps
 make down
 ```
 
-#### adminer
-GUIでテーブル操作ができる！
-```
-http://localhost:8080/
-```
-
 ## マイグレーションの実行
 ```
 # up
@@ -31,4 +25,10 @@ make migrate-down
 ## seed
 ```
 make seed-user
+```
+
+#### adminer
+GUIでテーブル操作ができる！
+```
+http://localhost:8080/
 ```
