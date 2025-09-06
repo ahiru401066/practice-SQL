@@ -4,15 +4,15 @@
 ## dockerコンテナの立ち上げ
 ```
 # コンテナ立ち上げ
-docker-compose up -d
 make up
+docker-compose up -d
 
 # コンテナの起動確認
 docker ps
 
 # コンテナ停止
-docker-compose down
 make down
+docker-compose down
 ```
 
 #### adminer
@@ -25,12 +25,12 @@ http://localhost:8080/
 Gooseを使用
 ```
 # up
-goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" up
 make migrate-up
+goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" up
 
 # down
-goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" down
 make migrate-down
+goose -dir ./migrations mysql "user:password@tcp(localhost:3306)/mydb" down
 ```
 
 ## seed（Gooseを使用）
